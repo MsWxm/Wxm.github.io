@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="css/index.css">
+
+
+</head>
+
+<body>
+    <!--头部盒子 -->
+    <header>
+
+        <h1>行业人员流向图</h1>
+        <div class="showTime"></div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000); //開始运行
+            function time() {
+                clearTimeout(t); //清除定时器
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours(); //获取时
+                var m = dt.getMinutes(); //获取分
+                var s = dt.getSeconds(); //获取秒
+                document.querySelector(".showTime").innerHTML =
+                    "当前时间：" +
+                    y +
+                    "年" +
+                    mt +
+                    "月" +
+                    day +
+                    "-" +
+                    h +
+                    "时" +
+                    m +
+                    "分" +
+                    s +
+                    "秒";
+                t = setTimeout(time, 1000); //设定定时器，循环运行
+            }
+        </script>
+    </header>
+    <!-- 页面主体 -->
+    <section class="mainbox">
+        <div class="colum">
+            <div class="panel bar">
+                <h2>人员流向图</h2>
+                <ul>
+                    <li> <a href="#">2020</a> </li>
+                    <li> <a href="#">2021</a> </li>
+                </ul>
+                <div class="chart">
+
+                </div>
+
+
+                <div class="panel-footer">
+
+                </div>
+            </div>
+            <div class="panel line">
+                <h2>年度人员变化图
+                    <a href="javascript:;">2020</a>
+                    <a href="javascript:;">2021</a>
+                </h2>
+                <div class="chart">
+
+                </div>
+
+
+                <div class="panel-footer">
+
+                </div>
+            </div>
+            <div class="panel pie">
+                <h2>年龄分布图</h2>
+                <div class="chart">
+
+                </div>
+
+
+                <div class="panel-footer">
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="colum">
+            <!-- no模块 -->
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>125811</li>
+                        <li>103451</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>行业需求人数</li>
+                        <li>行业从业人数</li>
+                    </ul>
+                </div>
+            </div>
+            <!--地图模块 -->
+            <div class="map">
+                <div class="map1">
+
+                </div>
+                <div class="map2">
+
+                </div>
+                <div class="map3"></div>
+                <div class="chart">
+                    <div class="map4"></div>
+                </div>
+            </div>
+            <!-- 地图模块 -->
+
+
+        </div>
+        <div class="colum">
+
+            <div class="panel bar2">
+                <h2>技能展示模块</h2>
+                <div class="chart">
+
+                </div>
+
+
+                <div class="panel-footer">
+
+                </div>
+            </div>
+            <div class="panel line1">
+                <h2>播放量变化图</h2>
+                <div class="chart">
+
+                </div>
+
+
+                <div class="panel-footer">
+
+                </div>
+            </div>
+            <div class="panel pie1">
+                <h2>地区分布图</h2>
+                <div class="chart">
+
+                </div>
+
+
+                <div class="panel-footer">
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 主题部分 -->
+    </section>
+    <!-- //引入js的顺序要正确 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- //中国地图需要引入china，js -->
+    <script src="js/china.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
